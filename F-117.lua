@@ -41,10 +41,17 @@ F_117 =  {
 	-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	    -- add model draw args for network transmitting to this draw_args table (32 limit)
     net_animation ={
-        22, 	-- Fuel bay
-        35, 	-- Brake shute
-		36, 	-- Brake shute noise
-		1000, 	-- Lights
+        22, 	-- Refuel Bay
+        35, 	-- Drag Chute
+		36,		-- Drag Chute Wind
+		190,    -- Taxi Light
+		191,    -- Wing lights
+		192,    -- Landing Lights
+		193,    -- Beacon Light
+		900,    -- Bomb bay
+		1000, 	-- Meme Light
+		1001,   -- Beacon Rotate
+		
     },
 	--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	M_empty						=	13380, --lbs
@@ -81,7 +88,7 @@ F_117 =  {
 	flaps_maneuver				=	1,
 	Mach_max					=	0.95,
 	range						=	2000,
-	RCS							=	0.01,
+	RCS							=	0.003,
 	Ny_max_e					=	4,
 	detection_range_max			=	0,
 	IR_emission_coeff			=	0.15,
@@ -117,15 +124,25 @@ F_117 =  {
 		}, -- end of engines_nozzles
 	crew_size	 = 1,
 	crew_members = 
-	{
-		[1] = 
-		{
-			ejection_seat_name = "F-117_seat",
-			drop_canopy_name = "F-117_canopy",
-			pos =  {0,	1,	0},
-			canopy_pos = {0,	1,	0},
-		}, -- end of [1]
-	}, -- end of crew_members
+    {
+        [1] = 
+            {
+                ejection_seat_name    =    9,
+                drop_canopy_name    =    "F-117_canopy",
+                pos =  {5.6,    1,    0},
+                canopy_pos = {4.5,    1,    0},
+                ejection_order         = 1,
+                canopy_arg          = 38, 
+                can_be_playable     = true,
+                ejection_added_speed = {-5,15,0},
+                role                  = "pilot",
+                role_display_name    = _("Pilot"),
+            }, -- end of [1]
+            [2] = 
+            {
+            },-- end of [2]
+            
+    }, -- end of crew_members
 
 	fires_pos = 
 		{
@@ -164,6 +181,10 @@ F_117 =  {
 		}, -- end of [2]
 	}, -- end of chaff_flare_dispenser
 
+	effects_presets = {
+		{effect = "OVERWING_VAPOR", file = current_mod_path.."/Effects/F117OverwingVapor.lua"},
+    },
+
 	--sensors
 	
 	detection_range_max		 = 60,
@@ -195,13 +216,13 @@ F_117 =  {
                 arg_value        = 1,
             },
             {
-                { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },
-                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },
-                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },
-				{ CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },
-                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },
-                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },
-				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" },
+                { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },	--GBU-10
+                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
+				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
+				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
+                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
+				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
+				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, 	--Mk 81
 				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
 				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
 				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
@@ -216,10 +237,7 @@ F_117 =  {
 				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
 				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
 				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
-				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16	
-				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
 				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
-				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
 				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
 				{ CLSID = "MK_82*28" }, 								-- on CBM
 				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
@@ -236,13 +254,13 @@ F_117 =  {
                 arg_value        = 1,
             },
             {
-                { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },
-                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },
-                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },
-				{ CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },
-                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },
-                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },
-				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" },
+                { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },	--GBU-10
+                { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
+				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
+				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
+                { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
+				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
+				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" },	-- Mk 81
 				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
 				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
 				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
@@ -257,10 +275,7 @@ F_117 =  {
 				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
 				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
 				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
-				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16	
-				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
 				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
-				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
 				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
 				{ CLSID = "MK_82*28" }, -- on CBM
 				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
@@ -280,6 +295,7 @@ F_117 =  {
 				{ CLSID = "{0519A262-0AB6-11d6-9193-00A0249B6F00}" },        --Tangazh ELINT pod
                 { CLSID = "{0519A263-0AB6-11d6-9193-00A0249B6F00}" },        --Shpil-2M Laser Intelligence Pod
                 { CLSID = "{0519A264-0AB6-11d6-9193-00A0249B6F00}" },        --L-081 Fantasmagoria ELINT pod
+				{ CLSID = "{B1EF6B0E-3D91-4047-A7A5-A99E7D8B4A8B}" },		 --Mercury LLTV Pod
 				  
 			}
            ),
