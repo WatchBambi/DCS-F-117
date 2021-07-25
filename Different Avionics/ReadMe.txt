@@ -1,1 +1,0 @@
-To change avionics go into the folder you want and copy the entry.lua and replace that with the original entry.lua
