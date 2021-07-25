@@ -73,9 +73,6 @@ join(res.keyCommands,{
 --Misc
 {combos = {{key = 'T', reformers = {'LShift'}}}, down = 10100, name = _('BomBay DOOR FUGGA'), category = _('EFM Misc')},
 {combos = {{key = 'P', reformers = {'LShift'}}}, down = 10101, name = _('Dragshute Toggle'), category = _('EFM Misc')},
-{combos = {{key = 'F', reformers = {'LShift'}}}, down = 10102, name = _('Flaps Toggle'), category = _('EFM Misc')},
-{combos = {{key = '', reformers = {''}}}, down = 10103, name = _('Flaps Up'), category = _('EFM Misc')},
-{combos = {{key = '', reformers = {''}}}, down = 10104, name = _('Flaps Down'), category = _('EFM Misc')},
 })
 -- joystick axes 
 join(res.axisCommands,{
