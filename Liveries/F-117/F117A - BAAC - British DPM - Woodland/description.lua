@@ -12,6 +12,14 @@ livery = {
 	{"Material.029"			, 	DIFFUSE					,   "Aircraft 03_BaseColor"				, false};
 	{"Material.036"			, 	DIFFUSE					,   "Aircraft 01_BaseColor"				, false};
 	{"Material.037"			, 	DIFFUSE					,   "Aircraft 01_BaseColor"				, false};
+	{"Aircraft_02.002"	    , 	DIFFUSE					,   "Aircraft 02_BaseColor"				, false};
+	{"Right_bomb_door"	    , 	DIFFUSE					,   "Door Missiles Right_BaseColor"		, false};
+	{"Left_bomb_door"	    , 	DIFFUSE					,   "Door Missiles Left_BaseColor"		, false};
+	{"Nose_bay"	            , 	DIFFUSE					,   "Bay Front_BaseColor"				, false};
+	{"Left_bay_1"	        , 	DIFFUSE					,   "Bay Left_BaseColor"				, false};
+	{"Left_bay_2"	        , 	DIFFUSE					,   "Bay Left_BaseColor"				, false};
+	{"Right_bay_1"	        , 	DIFFUSE					,   "Bay Right_BaseColor"				, false};
+	{"Right_bay_2"	        , 	DIFFUSE					,   "Bay Right_BaseColor"				, false};
 }
 name = "F117A - BAAC - WoodlandCamo"
 --Final version "for now"
