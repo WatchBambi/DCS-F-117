@@ -74,5 +74,6 @@ join(res.keyCommands,{
 --Misc
 {combos = {{key = 'T', reformers = {'LShift'}}}, down = 10100, name = _('BomBay DOOR FUGGA'), category = _('EFM Misc')},
 {combos = {{key = 'P', reformers = {'LShift'}}}, down = 10101, name = _('Dragshute Toggle'), category = _('EFM Misc')},
+{combos = {{key = 'G', reformers = {'LAlt'}}}, 		down = 69, name = _('Tail Hook Toggle'), 	category = _('EFM Misc')},
 })
 return res
