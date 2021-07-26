@@ -11,7 +11,7 @@ F_117 =  {
 	DisplayName			= _('F-117'),
 	
     HumanCockpit 		= true,
-	HumanCockpitPath    = current_mod_path..'/Cockpit/scripts',
+	HumanCockpitPath    = current_mod_path..'/Cockpit/Scripts',
 	
 	Picture 			= "F-117.png",
 	Rate 				= 40, -- RewardPoint in Multiplayer
@@ -54,11 +54,10 @@ F_117 =  {
 		
     },
 	--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	M_empty						=	13380, --lbs
-	M_nominal					=	213069, --lbs
-	M_max						=	232197, --lbs
-	M_fuel_max					=	9100, --kg
-	H_max						=	10000,
+	M_empty						=	13381, --KG
+	M_max						=	23813, --KG
+	M_fuel_max					=	8391, --KG
+	H_max						=	14000, --Meters
 	average_fuel_consumption	=	0.81,
 	CAS_min						=	64,
 	V_opt						=	270,
@@ -78,18 +77,19 @@ F_117 =  {
 	V_max_sea_level				=	292,
 	V_max_h						=	289,
 	tanker_type					=	1,
-	wing_area					=	780.0,
-	wing_span					=	43.4,
-	thrust_sum_max				=	80423,
-	thrust_sum_ab				=	80423,
-	Vy_max						=	30,
-	length						=	20.0914,
+	wing_area					=	84.8,
+	wing_span					=	13.2,
+	wing_type					= 	0,
+	thrust_sum_max				=	4808,
+	thrust_sum_ab				=	4808,
+	Vy_max						=	14.3,
+	length						=	20.3,
 	height						=	3.7846,
 	flaps_maneuver				=	1,
-	Mach_max					=	0.95,
+	Mach_max					=	0.92,
 	range						=	2000,
-	RCS							=	0.003,
-	Ny_max_e					=	4,
+	RCS							=	0.01,
+	Ny_max_e					=	4.5,
 	detection_range_max			=	0,
 	IR_emission_coeff			=	0.15,
 	IR_emission_coeff_ab		=	0,
@@ -123,7 +123,7 @@ F_117 =  {
 			}, -- end of [2]
 		}, -- end of engines_nozzles
 	crew_size	 = 1,
-	crew_members = 
+crew_members = 
     {
         [1] = 
             {
@@ -195,7 +195,7 @@ F_117 =  {
 	},
 	Sensors = {
 		RWR = "Abstract RWR", -- RWR type
-		RADAR = "N-019", -- Radar type
+		OPTIC = "Shkval",
 	},
 	HumanRadio = {
 		frequency = 127.5,  -- Radio Freq
@@ -216,33 +216,15 @@ F_117 =  {
                 arg_value        = 1,
             },
             {
+				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" },   --Mk 84
                 { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },	--GBU-10
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
-				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
-				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
-				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
-				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, 	--Mk 81
-				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
-				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
-				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
-				{ CLSID = "{585D626E-7F42-4073-AB70-41E728C333E2}" }, 	-- MER*12 Mk-82
-				{ CLSID	= "{B84DFE16-6AC7-4854-8F6D-34137892E166}" },   --"51 Mk-82"
-				{ CLSID = "{696CFFC4-0BDE-42A8-BE4B-0BE3D9DD723C}" }, 	-- HSAB*9 Mk-84
-				{ CLSID = "{F092B80C-BB54-477E-9408-66DEEF740008}" },   --Mk 84*18
-				{ CLSID	= "{D3ABF208-FA56-4D56-BB31-E0D931D57AE3}" },   --"Mk 84*28"
-				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" },   --M-117
-				{ CLSID = "{82F90BEC-0E2E-4CE5-A66E-1E4ADA2B5D1E}" },   --MER-3*3 M-117AB
-				{ CLSID = "{6CDB6B36-7165-47D0-889F-6625FB333561}" },   --MER*6 M-117AB
-				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
-				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
-				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
-				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
-				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
-				{ CLSID = "MK_82*28" }, 								-- on CBM
-				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
-				{ CLSID = "{RN-24}" },
-                { CLSID = "{RN-28}" },
+				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
+				--{ CLSID = "{GBU-31V3B}" },							--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
+				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD
+				--{ CLSID = "{CBU_87}" },                               --CBU-87
+				
             }
         ),
         pylon(2, 0, 0, 0, 0,
@@ -254,33 +236,14 @@ F_117 =  {
                 arg_value        = 1,
             },
             {
+ 				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" },   --Mk 84
                 { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },	--GBU-10
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
-				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
-				{ CLSID = "{34759BBC-AF1E-4AEE-A581-498FF7A6EBCE}" },   --GBU-24
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
-				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
-				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" },	-- Mk 81
-				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
-				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
-				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
-				{ CLSID = "{585D626E-7F42-4073-AB70-41E728C333E2}" }, 	-- MER*12 Mk-82
-				{ CLSID	= "{B84DFE16-6AC7-4854-8F6D-34137892E166}" },   --"51 Mk-82"
-				{ CLSID = "{696CFFC4-0BDE-42A8-BE4B-0BE3D9DD723C}" }, 	-- HSAB*9 Mk-84
-				{ CLSID = "{F092B80C-BB54-477E-9408-66DEEF740008}" },   --Mk 84*18
-				{ CLSID	= "{D3ABF208-FA56-4D56-BB31-E0D931D57AE3}" },   --"Mk 84*28"
-				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" },   --M-117
-				{ CLSID = "{82F90BEC-0E2E-4CE5-A66E-1E4ADA2B5D1E}" },   --MER-3*3 M-117AB
-				{ CLSID = "{6CDB6B36-7165-47D0-889F-6625FB333561}" },   --MER*6 M-117AB
-				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
-				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
-				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
-				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
-				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
-				{ CLSID = "MK_82*28" }, -- on CBM
-				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
-				{ CLSID = "{RN-24}" },
-                { CLSID = "{RN-28}" },
+				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
+				--{ CLSID = "{GBU-31V3B}" },							--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
+				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD
+				--{ CLSID = "{CBU_87}" },                               --CBU-87
             }
         ),
 
@@ -289,11 +252,11 @@ F_117 =  {
            {
             },
 			{
-			    { CLSID = "{A111396E-D3E8-4b9c-8AC9-2432489304D5}" },        --AN/AAQ-28 LITENING
-				{ CLSID = "{CAAC1CFD-6745-416B-AFA4-CB57414856D0}" },        --Lantirn F-16
-				{ CLSID = "{8C3F26A2-FA0F-11d5-9190-00A0249B6F00}" },        --Sky-Shadow ECM Pod
-				{ CLSID = "{0519A262-0AB6-11d6-9193-00A0249B6F00}" },        --Tangazh ELINT pod
-                { CLSID = "{0519A263-0AB6-11d6-9193-00A0249B6F00}" },        --Shpil-2M Laser Intelligence Pod
+			    --{ CLSID = "{A111396E-D3E8-4b9c-8AC9-2432489304D5}" },        --AN/AAQ-28 LITENING
+				--{ CLSID = "{CAAC1CFD-6745-416B-AFA4-CB57414856D0}" },        --Lantirn F-16
+				--{ CLSID = "{8C3F26A2-FA0F-11d5-9190-00A0249B6F00}" },        --Sky-Shadow ECM Pod
+				--{ CLSID = "{0519A262-0AB6-11d6-9193-00A0249B6F00}" },        --Tangazh ELINT pod
+                --{ CLSID = "{0519A263-0AB6-11d6-9193-00A0249B6F00}" },        --Shpil-2M Laser Intelligence Pod
                 { CLSID = "{0519A264-0AB6-11d6-9193-00A0249B6F00}" },        --L-081 Fantasmagoria ELINT pod
 				{ CLSID = "{B1EF6B0E-3D91-4047-A7A5-A99E7D8B4A8B}" },		 --Mercury LLTV Pod
 				  
@@ -390,6 +353,11 @@ F_117 =  {
         ["WHEEL_R"]                 = {critical_damage = 3}, -- 85
     }),	
 
+ColdStartDefaultControls = {
+        [9]      = 1.0,        -- [15] = Canards
+		[10]     = 1.0,        -- [15] = Canards
+      
+    }
 }
 
 add_aircraft(F_117)
