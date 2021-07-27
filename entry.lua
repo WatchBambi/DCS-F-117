@@ -63,8 +63,8 @@ FM.old 		= 54
 -------------------------------------------------------------------------------
 make_flyable('F-117',current_mod_path..'/Cockpit/Scripts/', FM, current_mod_path..'/comm.lua')--EFM FC3
 ------------------------------------------------------------------------------------
-dofile(current_mod_path..'/gbu-31.lua')
-dofile(current_mod_path..'/gbu-31v3b.lua')
+dofile(current_mod_path..'/Weapons/gbu-31.lua')
+dofile(current_mod_path..'/Weapons/gbu-31v3b.lua')
 dofile(current_mod_path..'/F-117.lua')
 -------------------------------------------------------------------------------------
 plugin_done()
