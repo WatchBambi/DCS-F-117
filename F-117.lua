@@ -41,28 +41,22 @@ F_117 =  {
 	-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	    -- add model draw args for network transmitting to this draw_args table (32 limit)
     net_animation ={
-        22, 	-- Refuel Bay
-        35, 	-- Drag Chute
-		36,		-- Drag Chute Wind
-		190,    -- Taxi Light
-		191,    -- Wing lights
-		192,    -- Landing Lights
-		193,    -- Beacon Light
-		900,    -- Bomb bay
-		1000, 	-- Meme Light
-		1001,   -- Beacon Rotate
-		
+        22, 	-- Fuel bay
+        35, 	-- Brake shute
+		36, 	-- Brake shute noise
+		1000, 	-- Lights
     },
 	--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	M_empty						=	13381, --KG
+	M_nominal					= 	19391, --KG, calculated as half fuel and combat load of 2x 2000lb bombs.
 	M_max						=	23813, --KG
 	M_fuel_max					=	8391, --KG
 	H_max						=	14000, --Meters
-	average_fuel_consumption	=	0.81,
-	CAS_min						=	64,
+	average_fuel_consumption	=	0.4,
+	CAS_min						=	65,
 	V_opt						=	270,
 	V_take_off					=	85,
-	V_land						=	68,
+	V_land						=	77,
 	has_afteburner				=	false,
 	has_speedbrake				=	false,
 	main_gear_pos 				= 	{-0.942,	-2.050,	2.509},
@@ -80,15 +74,15 @@ F_117 =  {
 	wing_area					=	84.8,
 	wing_span					=	13.2,
 	wing_type					= 	0,
-	thrust_sum_max				=	4808,
-	thrust_sum_ab				=	4808,
+	thrust_sum_max				=	9616,
+	thrust_sum_ab				=	9616,
 	Vy_max						=	14.3,
 	length						=	20.3,
 	height						=	3.7846,
 	flaps_maneuver				=	1,
 	Mach_max					=	0.92,
-	range						=	2000,
-	RCS							=	0.01,
+	range						=	1730,
+	RCS							=	0.003,
 	Ny_max_e					=	4.5,
 	detection_range_max			=	0,
 	IR_emission_coeff			=	0.15,
@@ -194,7 +188,6 @@ crew_members =
 		elevation = {-50.0, 90.0} -- pilot view vertical (AI)
 	},
 	Sensors = {
-		RWR = "Abstract RWR", -- RWR type
 		OPTIC = "Shkval",
 	},
 	HumanRadio = {
@@ -221,9 +214,9 @@ crew_members =
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
 				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
-				--{ CLSID = "{GBU-31V3B}" },							--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
-				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD
-				--{ CLSID = "{CBU_87}" },                               --CBU-87
+				{ CLSID = "F117_GBU31_BLU_109" },						--GBU-31 JDAM BLU-109 Penetrator)
+				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD- Not working yet
+				--{ CLSID = "{CBU_87}" },                               --CBU-87- Not working yet
 				
             }
         ),
@@ -241,9 +234,9 @@ crew_members =
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
 				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
-				--{ CLSID = "{GBU-31V3B}" },							--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
-				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD
-				--{ CLSID = "{CBU_87}" },                               --CBU-87
+				{ CLSID = "F117_GBU31_BLU_109" },						--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
+				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD- Not working yet
+				--{ CLSID = "{CBU_87}" },                               --CBU-87- Not working yet
             }
         ),
 
@@ -353,11 +346,6 @@ crew_members =
         ["WHEEL_R"]                 = {critical_damage = 3}, -- 85
     }),	
 
-ColdStartDefaultControls = {
-        [9]      = 1.0,        -- [15] = Canards
-		[10]     = 1.0,        -- [15] = Canards
-      
-    }
 }
 
 add_aircraft(F_117)
