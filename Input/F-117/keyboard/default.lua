@@ -34,8 +34,8 @@ join(res.keyCommands,{
 --{combos = {{key = 'I', reformers = {'RShift'}}}, down = iCommandPlaneChangeRadarPRF, name = _('Radar Pulse Repeat Frequency Select'), category = _('Sensors')},
 {combos = {{key = 'O'}}, down = iCommandPlaneEOSOnOff, name = _('CCRP steering mode'), category = _('Sensors')},
 {combos = {{key = 'O', reformers = {'RShift'}}}, down = iCommandPlaneLaserRangerOnOff, name = _('Laser Ranger On/Off'), category = _('Sensors')},
-{combos = {{key = 'O', reformers = {'RCtrl'}}}, down = iCommandPlaneNightTVOnOff, name = _('Night Vision (FLIR or LLTV) On/Off'), category = _('Sensors')}, --StuntPuppy
-{combos = {{key = 'E', reformers = { 'LShift'}}}, down = iCommandActiveIRJamming, name = _('Infrared Jamming'), category = _('Sensors')}, --StuntPuppy
+{combos = {{key = 'O', reformers = {'RCtrl'}}}, down = iCommandPlaneNightTVOnOff, name = _('Night Vision (FLIR or LLTV) On/Off'), category = _('Sensors')},
+{combos = {{key = 'E', reformers = { 'LShift'}}}, down = iCommandActiveIRJamming, name = _('Infrared Jamming'), category = _('Sensors')},
 {combos = {{key = ';'}}, pressed = iCommandPlaneRadarUp, up = iCommandPlaneRadarStop, name = _('Target Designator Up'), category = _('Sensors')},
 {combos = {{key = '.'}}, pressed = iCommandPlaneRadarDown, up = iCommandPlaneRadarStop, name = _('Target Designator Down'), category = _('Sensors')},
 {combos = {{key = ','}}, pressed = iCommandPlaneRadarLeft, up = iCommandPlaneRadarStop, name = _('Target Designator Left'), category = _('Sensors')},
