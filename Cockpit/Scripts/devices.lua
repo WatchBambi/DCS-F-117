@@ -7,3 +7,4 @@ end
 devices = {}
 devices["LIGHTS"]					= counter()
 devices["MiscFunc"]					= counter()
+devices["HOOK"]						= counter()

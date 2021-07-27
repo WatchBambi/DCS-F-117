@@ -13,6 +13,7 @@ creators  = {}
 
 creators[devices.LIGHTS]            = {"avLuaDevice"                ,LockOn_Options.script_path.."Systems/lights_system.lua"}
 creators[devices.MiscFunc] 			= {"avLuaDevice"				,LockOn_Options.script_path.."Systems/MiscFunc.lua"}
+creators[devices.HOOK]				= {"avLuaDevice"				,LockOn_Options.script_path.."Systems/hook.lua"}
 
 -- Indicators
 indicators = {}
