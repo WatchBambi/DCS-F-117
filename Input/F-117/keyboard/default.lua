@@ -34,7 +34,8 @@ join(res.keyCommands,{
 --{combos = {{key = 'I', reformers = {'RShift'}}}, down = iCommandPlaneChangeRadarPRF, name = _('Radar Pulse Repeat Frequency Select'), category = _('Sensors')},
 {combos = {{key = 'O'}}, down = iCommandPlaneEOSOnOff, name = _('CCRP steering mode'), category = _('Sensors')},
 {combos = {{key = 'O', reformers = {'RShift'}}}, down = iCommandPlaneLaserRangerOnOff, name = _('Laser Ranger On/Off'), category = _('Sensors')},
-{combos = {{key = 'O', reformers = {'RCtrl'}}}, down = iCommandPlaneNightTVOnOff, name = _('Night Vision (FLIR or LLTV) On/Off'), category = _('Sensors')},
+{combos = {{key = 'O', reformers = {'RCtrl'}}}, down = iCommandPlaneNightTVOnOff, name = _('Night Vision (FLIR or LLTV) On/Off'), category = _('Sensors')}, --StuntPuppy
+{combos = {{key = 'E', reformers = { 'LShift'}}}, down = iCommandActiveIRJamming, name = _('Infrared Jamming'), category = _('Sensors')}, --StuntPuppy
 {combos = {{key = ';'}}, pressed = iCommandPlaneRadarUp, up = iCommandPlaneRadarStop, name = _('Target Designator Up'), category = _('Sensors')},
 {combos = {{key = '.'}}, pressed = iCommandPlaneRadarDown, up = iCommandPlaneRadarStop, name = _('Target Designator Down'), category = _('Sensors')},
 {combos = {{key = ','}}, pressed = iCommandPlaneRadarLeft, up = iCommandPlaneRadarStop, name = _('Target Designator Left'), category = _('Sensors')},
@@ -52,6 +53,10 @@ join(res.keyCommands,{
 {combos = {{key = 'R', reformers = {'RShift'}}}, down = iCommandChangeRWRMode, name = _('RWR/SPO Mode Select'), category = _('Sensors')},
 {combos = {{key = ',', reformers = {'RAlt'}}}, down = iCommandPlaneThreatWarnSoundVolumeDown, name = _('RWR/SPO Sound Signals Volume Down'), category = _('Sensors')},
 {combos = {{key = '.', reformers = {'RAlt'}}}, down = iCommandPlaneThreatWarnSoundVolumeUp, name = _('RWR/SPO Sound Signals Volume Up'), category = _('Sensors')},
+
+{combos = {{key = 'H', reformers = {'RShift'}}}		   , down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Night Vision Goggles')}, --CT Aviator added
+{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Night Vision Goggles')}, --CT Aviator added
+{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Night Vision Goggles')}, --CT Aviator added
 
 -- Weapons                                                                        
 {combos = {{key = 'V', reformers = {'LCtrl'}}}, down = iCommandPlaneSalvoOnOff, name = _('Salvo Mode'), category = _('Weapons')},
@@ -72,8 +77,8 @@ join(res.keyCommands,{
 {combos = {{key = '', reformers = {''}}},     	down = 10007, name = _('Beacon Light ON/OFF'), category = _('Lighting')},
 
 --Misc
-{combos = {{key = 'T', reformers = {'LShift'}}}, down = 10100, name = _('Bombay door Toggle'), category = _('EFM Misc')},
-{combos = {{key = 'P', reformers = {'LShift'}}}, down = 10101, name = _('Dragshute Toggle'), category = _('EFM Misc')},
+{combos = {{key = 'T', reformers = {'LShift'}}}, down = 10100, name = _('Bomb Bay Door Toggle'), category = _('EFM Misc')},
+{combos = {{key = 'P', reformers = {'LShift'}}}, down = 10101, name = _('Drag Chute Toggle'), category = _('EFM Misc')},
 {combos = {{key = 'G', reformers = {'LAlt'}}}, 		down = 69, name = _('Tail Hook Toggle'), 	category = _('EFM Misc')},
 })
 return res
