@@ -18,6 +18,7 @@ day_texture_set_value   = 0.0
 night_texture_set_value = 0.1
 
 local controllers = LoRegisterPanelControls()
+local RAD_TO_DEG = 57.2958
 
 CanopyPos							= CreateGauge()
 CanopyPos.arg_number				= 181
@@ -26,7 +27,7 @@ CanopyPos.output					= {0, 100}
 CanopyPos.controller				= controllers.base_gauge_CanopyPos
 
 ------------------------------------------------------------------------------	Attitude
-ADIPitch							= CreateGauge("parameter")
+ADIPitch							= CreateGauge()
 ADIPitch.arg_number					= 1004
 ADIPitch.input						= {-140	, 140}
 ADIPitch.output						= {-100	, 100}
@@ -46,21 +47,36 @@ HideStick.output                	= {0.0, 1.0}
 
 RadarAlt							= CreateGauge()
 RadarAlt.arg_number					= 523
-RadarAlt.input						= {0, 30	, 60	, 91	, 121	, 182	, 243	, 304	, 609	, 914	, 1219}
-RadarAlt.output						= {0, 0.095	, 0.206	, 0.317	, 0.46	, 0.572	, 0.683	, 0.746	, 0.841	, 0.921	, 1}
+RadarAlt.input						= {0, 30.48	, 60.96	, 91.44	, 121.92	, 182.88	, 243.84	, 304.8	, 609.6	, 914.4	, 1219.2}
+RadarAlt.output						= {0, 0.095	, 0.206	, 0.317	, 0.46	, 0.572	, 0.683	, 0.746	, 0.841	, 0.920	, 1}
 RadarAlt.controller					= controllers.base_gauge_RadarAltitude
 
-BaroAlt								= CreateGauge("parameter")
+BaroAlt								= CreateGauge("cycled")
 BaroAlt.arg_number					= 1005
-BaroAlt.input						= {0	, 304} -- 0 to 1000 FT (or M?)
+BaroAlt.cycle_value 				= 304.8
+BaroAlt.input						= {0	, 304.8} -- 0 to 1000 FT (or M?)
 BaroAlt.output						= {0	, 1}
 BaroAlt.controller					= controllers.base_gauge_BarometricAltitude
 
-indispeed							= CreateGauge("parameter")
+indispeed							= CreateGauge()
 indispeed.arg_number				= 1006
-indispeed.input						= {0.0	, 100	, 200	, 300} 
-indispeed.output					= {0	, 0.333	, 0.666	, 1}
+indispeed.input						= {0.0	, 102.889	, 205.778	, 308.667} 
+indispeed.output					= {0	, 0.333	, 0.6666	, 1}
 indispeed.controller				= controllers.base_gauge_IndicatedAirSpeed
+
+--VertAccel							= CreateGauge()
+--VertAccel.arg_number				= 24
+--VertAccel.input						= {-3*9.8, -2*9.8, -1*gforce, 0*gforce, 1*gforce, 2*gforce, 3*gforce, 4*gforce, 5*gforce, 6*gforce, 7*gforce, 8*gforce, 8.5*gforce}
+--VertAccel.output					= {-0.5, -0.375, -0.250, -0.142, 0, 0.111, 0.26245, 0.381, 0.5152, 0.651, 0.767, 0.937, 1}
+--VertAccel.controller				= controllers.base_gauge_VerticalAcceleration
+
+AoAGauge							= CreateGauge()
+AoAGauge.arg_number					= 1007
+AoAGauge.input						= {-10/RAD_TO_DEG, 10/RAD_TO_DEG, 20/RAD_TO_DEG}
+AoAGauge.output						= {-1, 0.5, 1}
+AoAGauge.controller					= controllers.base_gauge_AngleOfAttack
+
+
 
 need_to_be_closed = false
 
