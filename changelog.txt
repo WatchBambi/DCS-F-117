@@ -25,7 +25,8 @@ ____________________________________________
 ____________________________________________
 
 -Corrected many values in F-117.lua
--Realistic loadouts (Second F-117.lua included for people who want the crazy loadouts to do the funny stuff, just replace it with the bonus one.)
+
+-Realistic loadouts (Second F-117.lua included for people who want the crazy loadouts to do the funny stuff, just replace it with the bonus one. Bonus lua is in PlaneLuaSwap folder)
 
 -Added JDAMs (Thanks for the help from guys over at the Gripen mod)
     -They're TV designated, designate a point, 
