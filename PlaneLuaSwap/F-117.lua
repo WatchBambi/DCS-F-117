@@ -196,10 +196,13 @@ crew_members =
 	},
 	Sensors = {
 		OPTIC = "Shkval",
+		RWR = "Abstract RWR",
 	},
+	
 	Countermeasures = {
-		IRCM = "Sukhogruz"
-    },
+        IRCM = "Sukhogruz"
+	},
+	
 	HumanRadio = {
 		frequency = 127.5,  -- Radio Freq
 		editable = true,
@@ -224,8 +227,35 @@ crew_members =
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
 				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
-				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
-				{ CLSID = "F117_GBU31_BLU_109" },						--GBU-31 JDAM BLU-109 Penetrator)
+				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28
+				{ CLSID = "F117_GBU31" 							   },	--GBU-31 JDAM
+				{ CLSID = "F117_GBU31_BLU_109"                     },   --GBU-31 JDAM BLU-109 Penetrator
+				{ CLSID = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}" },	--HARM
+				{ CLSID = "LAU_117_AGM_65L"						   },	--AGM-65L laser guided Maverick
+				{ CLSID = "{Mk82AIR}"							   }, 	--Mk-82 w/ drag vanes
+				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, 	--Mk 81
+				{ CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}" },	--Mk 82
+				{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}" },	--Mk 83
+				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
+				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
+				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
+				{ CLSID = "{585D626E-7F42-4073-AB70-41E728C333E2}" }, 	-- MER*12 Mk-82
+				{ CLSID	= "{B84DFE16-6AC7-4854-8F6D-34137892E166}" },   --"51 Mk-82"
+				{ CLSID = "{696CFFC4-0BDE-42A8-BE4B-0BE3D9DD723C}" }, 	-- HSAB*9 Mk-84
+				{ CLSID = "{F092B80C-BB54-477E-9408-66DEEF740008}" },   --Mk 84*18
+				{ CLSID	= "{D3ABF208-FA56-4D56-BB31-E0D931D57AE3}" },   --"Mk 84*28"
+				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" },   --M-117
+				{ CLSID = "{82F90BEC-0E2E-4CE5-A66E-1E4ADA2B5D1E}" },   --MER-3*3 M-117AB
+				{ CLSID = "{6CDB6B36-7165-47D0-889F-6625FB333561}" },   --MER*6 M-117AB
+				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
+				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
+				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
+				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
+				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
+				{ CLSID = "MK_82*28" }, 								-- on CBM
+				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
+				{ CLSID = "{RN-24}" },
+                { CLSID = "{RN-28}" },
 				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD- Not working yet
 				--{ CLSID = "{CBU_87}" },                               --CBU-87- Not working yet
 				
@@ -240,13 +270,40 @@ crew_members =
                 arg_value        = 1,
             },
             {
- 				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" },   --Mk 84
+				{ CLSID = "{AB8B8299-F1CC-4359-89B5-2172E0CF4A5A}" },   --Mk 84
                 { CLSID = "{51F9AAE5-964F-4D21-83FB-502E3BFE5F8A}" },	--GBU-10
                 { CLSID = "{DB769D48-67D7-42ED-A2BE-108D566C8B1E}" },   --GBU-12
-				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16				
+				{ CLSID = "{0D33DDAE-524F-4A4E-B5B8-621754FE3ADE}" },   --GBU-16
                 { CLSID = "{EF0A9419-01D6-473B-99A3-BEBDB923B14D}" },	--GBU-27
-				{ CLSID = "F117_GBU31" }, 					            --GBU-31 JDAM
-				{ CLSID = "F117_GBU31_BLU_109" },						--GBU-31 JDAM BLU-109 Penetrator (need to write a new script for it)
+				{ CLSID = "{F06B775B-FC70-44B5-8A9F-5B5E2EB839C7}" },   --GBU-28				
+				{ CLSID = "F117_GBU31" 							   },	--GBU-31 JDAM
+				{ CLSID = "F117_GBU31_BLU_109"                     },   --GBU-31 JDAM BLU-109 Penetrator
+				{ CLSID = "{B06DD79A-F21E-4EB9-BD9D-AB3844618C93}" },	--HARM
+				{ CLSID = "LAU_117_AGM_65L"						   },	--AGM-65L laser guided Maverick
+				{ CLSID = "{Mk82AIR}"							   }, 	--Mk-82 w/ drag vanes
+				{ CLSID	= "{90321C8E-7ED1-47D4-A160-E074D5ABD902}" }, 	--Mk 81
+				{ CLSID = "{BCE4E030-38E9-423E-98ED-24BE3DA87C32}" },	--Mk 82
+				{ CLSID = "{7A44FF09-527C-4B7E-B42B-3F111CFE50FB}" },	--Mk 83
+				{ CLSID	= "{ACADB374-6D6C-45A0-BA7C-B22B2E108AE4}" },   --"Mk 20*18"
+				{ CLSID = "{95334A8C-6ACB-4CB7-99BC-6D07B1479EDA}" },   --MER*6 Mk-81
+				{ CLSID = "{7B34E0BB-E427-4C2A-A61A-8407CE18B54D}" },   --MER-3*3 Mk-81
+				{ CLSID = "{585D626E-7F42-4073-AB70-41E728C333E2}" }, 	-- MER*12 Mk-82
+				{ CLSID	= "{B84DFE16-6AC7-4854-8F6D-34137892E166}" },   --"51 Mk-82"
+				{ CLSID = "{696CFFC4-0BDE-42A8-BE4B-0BE3D9DD723C}" }, 	-- HSAB*9 Mk-84
+				{ CLSID = "{F092B80C-BB54-477E-9408-66DEEF740008}" },   --Mk 84*18
+				{ CLSID	= "{D3ABF208-FA56-4D56-BB31-E0D931D57AE3}" },   --"Mk 84*28"
+				{ CLSID = "{00F5DAC4-0466-4122-998F-B1A298E34113}" },   --M-117
+				{ CLSID = "{82F90BEC-0E2E-4CE5-A66E-1E4ADA2B5D1E}" },   --MER-3*3 M-117AB
+				{ CLSID = "{6CDB6B36-7165-47D0-889F-6625FB333561}" },   --MER*6 M-117AB
+				{ CLSID = "{574EDEDF-20DE-4942-B2A2-B2EDFD621562}" },   --MER*12 M-117
+				{ CLSID = "{B58F99BA-5480-4572-8602-28B0449F5260}" },   --M-117*27
+				{ CLSID	= "{72CAC282-AE18-490B-BD4D-35E7EE969E73}" },   --"M117*51"
+				{ CLSID = "{B8C99F40-E486-4040-B547-6639172A5D57}" },   --GBU-27*4
+				{ CLSID	= "{D9179118-E42F-47DE-A483-A6C2EA7B4F38}" },   --"FAB-1500*6"
+				{ CLSID = "MK_82*28" }, 								-- on CBM
+				{ CLSID = "B-1B_Mk-84*8" 				,Type = 8 },	-- on rotary launcher ( 8 sides )
+				{ CLSID = "{RN-24}" },
+                { CLSID = "{RN-28}" },
 				--{ CLSID = "{CBU_103}" },								--CBU-87 with WCMD- Not working yet
 				--{ CLSID = "{CBU_87}" },                               --CBU-87- Not working yet
             }
