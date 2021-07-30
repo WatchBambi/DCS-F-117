@@ -54,11 +54,11 @@ F_117 =  {
 		1001,   -- Beacon Rotate
     },
 	--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	M_empty						=	13381, --KG
-	M_nominal					= 	19391, --KG, calculated as half fuel and combat load of 2x 2000lb bombs.
-	M_max						=	23813, --KG
-	M_fuel_max					=	8391, --KG
-	H_max						=	14000, --Meters
+	M_empty						=	13380.975, --KG
+	M_nominal					= 	19391.074, --KG, calculated as half fuel and combat load of 2x 2000lb bombs.
+	M_max						=	23813.599, --KG
+	M_fuel_max					=	8391.4588, --KG
+	H_max						=	13716, --Meters
 	average_fuel_consumption	=	0.81,
 	CAS_min						=	65,
 	V_opt						=	275,
@@ -86,7 +86,7 @@ F_117 =  {
 	Vy_max						=	14.3,
 	length						=	20.3,
 	height						=	3.7846,
-	flaps_maneuver				=	1,
+	flaps_maneuver				=	0,
 	Mach_max					=	0.92,
 	range						=	1730,
 	RCS							=	0.003,
