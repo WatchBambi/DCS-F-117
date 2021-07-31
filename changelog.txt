@@ -9,6 +9,7 @@ DCS: F-117 Nighthawk Mod V3.1 changelog
 _____________________________________________________________________________________________________________________________________
 
 -Improved 3D model
+    -Scaled HUD frame to match the real thing
     -Changed the scale of the turbine intakes to 
       match realistically
     - Modeled in new sensor balls for the FLIR and 
@@ -19,17 +20,22 @@ ________________________________________________________________________________
       model
     -Redid the textures for all bays to make them 
       look more metallic
+    -Added animations transmitted over multiplayer
 _____________________________________________________________________________________________________________________________________
+
+-No longer crashes DCS on ejection (Thanks to Freebird)
 
 -Corrected many values in F-117.lua
 
 -Realistic loadouts (Second F-117.lua included for people who want the crazy loadouts to do the funny stuff, just replace it with the bonus one. Bonus lua is in PlaneLuaSwap folder)
 
+-More weapons coming in future updates
+
 -Added JDAMs (Thanks to the guys over at the Gripen mod)
 
 -Added Mercury pod for FLIR, and Fantasmagoria ELINT pod for SA and targeting.
 
--Added Night Vision Goggles(Thanks to CT Aviator CT-14750)
+-Added Night Vision Goggles (Thanks to CT Aviator CT-14750)
 
 -AoA gauge is now functional. It's not perfectly right but it is functional.
 
@@ -40,6 +46,8 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________
 				--Known issues--
 
--Most of the gauges either don't work or just plain aren't there. The cockpit functions and the cockpit itself will be improved in future updates.
+-Most of the gauges either don't work or just plain aren't there/aren't right. The cockpit functions and the cockpit itself will be improved in future updates.
 -Some weapons clip through the 3D model
+-Can clash with some other mods 
+-Nose wheel can clip through ground on hard landings
 -Please come talk about the mod on our Discord: https://discord.gg/kJqXuQk757
