@@ -1,15 +1,12 @@
 DCS: F-117 Nighthawk Mod V3.1 changelog
 
 -Improved EFM
-    -No more 3 stage controls 
     -Removed flaps
-    -Cleaned up/reorganized code (lanky)
+    -Cleaned up/reorganized code (Lanky)
     -Added basic autopilot
     -No more skidmarks
 
--Collision completely redone
--Can withstand harder landings now
-____________________________________________
+_____________________________________________________________________________________________________________________________________
 
 -Improved 3D model
     -Changed the scale of the turbine intakes to 
@@ -22,18 +19,27 @@ ____________________________________________
       model
     -Redid the textures for all bays to make them 
       look more metallic
-____________________________________________
+_____________________________________________________________________________________________________________________________________
 
 -Corrected many values in F-117.lua
 
 -Realistic loadouts (Second F-117.lua included for people who want the crazy loadouts to do the funny stuff, just replace it with the bonus one. Bonus lua is in PlaneLuaSwap folder)
 
--Added JDAMs (Thanks for the help from guys over at the Gripen mod)
-    -They're TV designated, designate a point, 
-      launch and turn away, they'll track on their 
-      own.
+-Added JDAMs (Thanks to the guys over at the Gripen mod)
+
 -Added Mercury pod for FLIR, and Fantasmagoria ELINT pod for SA and targeting.
+
 -Added Night Vision Goggles(Thanks to CT Aviator CT-14750)
--Added animations to some gauges in the cockpit, AoA gauge is now functional.
+
+-AoA gauge is now functional. It's not perfectly right but it is functional.
+
+-Backup Altimeter now cycles every thousand feet in preparation for future cockpit modeling.
+
 -Corrected IAS speeds in the speedometer gauge (in knots)
--Removed RWR (The real thing did not have one, the Nighthawk's whole survivability strategy was to fly low under the radar and never be seen in the first place, visually or on radar)
+
+_____________________________________________________________________________________________________________________________________
+				--Known issues--
+
+-Most of the gauges either don't work or just plain aren't there. The cockpit functions and the cockpit itself will be improved in future updates.
+-Some weapons clip through the 3D model
+-Please come talk about the mod on our Discord: https://discord.gg/kJqXuQk757
