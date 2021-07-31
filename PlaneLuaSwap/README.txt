@@ -1,5 +1,8 @@
-To swap to the funny loadouts, just backup your original F-117.lua in the base folder and replace it
-with the new one here. You must rename the new one to F-117.lua.
+To swap to the funny loadouts, just 
+
+1. Backup your original F-117.lua in the base folder
+2. Replace it with the new one here. 
+3. You must rename the new one to F-117.lua.
 
 
 A note about the HARMs: Only fire one at a time. 
