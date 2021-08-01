@@ -48,6 +48,10 @@ mount_vfs_model_path	(current_mod_path.."/Cockpit/Resources/Shape")
 mount_vfs_texture_path	(current_mod_path.."/Cockpit/Resources/Texture")
 mount_vfs_liveries_path (current_mod_path.."/Liveries")
 mount_vfs_texture_path  (current_mod_path.."/Textures")
+mount_vfs_texture_path  (current_mod_path.."/Textures/Cockpit")
+mount_vfs_texture_path  (current_mod_path.."/Textures/Exterior_default")
+mount_vfs_texture_path  (current_mod_path.."/Textures/Exterior_default_2")
+mount_vfs_texture_path  (current_mod_path.."/Textures/Textures_misc")
 mount_vfs_texture_path	(current_mod_path.."/Skins/1/ME")--for simulator loading window
 
 dofile(current_mod_path.."/Views.lua")
