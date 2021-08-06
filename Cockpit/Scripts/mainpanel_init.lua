@@ -72,8 +72,8 @@ indispeed.controller				= controllers.base_gauge_IndicatedAirSpeed
 
 AoAGauge							= CreateGauge()
 AoAGauge.arg_number					= 1007
-AoAGauge.input						= {-10/RAD_TO_DEG, 10/RAD_TO_DEG, 20/RAD_TO_DEG}
-AoAGauge.output						= {-1, 0.5, 1}
+AoAGauge.input						= {-10/RAD_TO_DEG, 0, 10/RAD_TO_DEG, 20/RAD_TO_DEG}
+AoAGauge.output						= {-1, 0, 0.5, 1}
 AoAGauge.controller					= controllers.base_gauge_AngleOfAttack
 
 
