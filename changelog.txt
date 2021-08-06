@@ -1,3 +1,12 @@
+Credits:
+Sérvalpilot for his amazing work on Cpt Smiley's CustomFM we use as a base
+Lanky for the logic to the dragshute, bomb bay door, early vapor implementation, and his work on the EFM
+The whole A-4C-E team for sharing their awesome hard work as open source!
+The Gripen team for their help with weapons implementation
+Da_Madcat and scorch00 for their work on the community liveries
+FreeBird for the ejection seat fix
+CT Aviator for the NV goggles fix
+
 DCS: F-117 Nighthawk Mod V3.1 changelog
 
 -Improved EFM
@@ -50,4 +59,4 @@ ________________________________________________________________________________
 -Some weapons clip through the 3D model
 -Can clash with some other mods 
 -Nose wheel can clip through ground on hard landings
--Please come talk about the mod on our Discord: https://discord.gg/kJqXuQk757
+-Please come talk about the mod on our Discord: https://discord.gg/qj6wz48jAn
