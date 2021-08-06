@@ -1,5 +1,5 @@
 Credits:
-Sérvalpilot for his amazing work on Cpt Smiley's CustomFM we use as a base
+Sérvalpilot for his amazing work on the CustomFM we use as a base and Cpt Smiley for the original work on the F-16 High Fidelity Flight Dynamics and Tech/Academic Initial Demonstration EFM
 Lanky for the logic to the dragshute, bomb bay door, early vapor implementation, and his work on the EFM
 The whole A-4C-E team for sharing their awesome hard work as open source!
 The Gripen team for their help with weapons implementation
